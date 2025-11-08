@@ -1,5 +1,6 @@
 <template>
   <div class="appContainer">
+    <h1>vite你好</h1>
     <router-view />
     <AudioPlayer />
     <PopupPage/>
