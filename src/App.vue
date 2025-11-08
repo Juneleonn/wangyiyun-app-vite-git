@@ -9,7 +9,7 @@
   </div>
 </template>
 <script setup>
-
+console.log('vite行不行啊')
 import AudioPlayer from '@/components/Public/AudioPlay.vue'
 import PopupPage from '@/components/Public/PopupPage.vue'
 import PlayListPopup from '@/components/Public/PlayListPopup.vue'
