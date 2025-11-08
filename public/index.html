@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4670201_qlemlha3jm.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- 阿里字体图标 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4670201_qlemlha3jm.css" />
+
+    <title>网易云 Vite App</title>
+
+    <!-- Vite 会自动注入打包后的 CSS -->
   </head>
+
   <body>
+    <!-- 提示浏览器开启 JS -->
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>
+        很抱歉，网易云 Vite App 需要启用 JavaScript 才能正常运行，请开启 JS。
+      </strong>
     </noscript>
+
+    <!-- Vue 挂载点 -->
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <!-- 自适应字体脚本（1rem = 屏幕宽度 / 37.5） -->
+    <script>
+      (function () {
+        const docEl = document.documentElement;
+        const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        const recalc = () => {
+          const width = docEl.clientWidth;
+          if (!width) return;
+          docEl.style.fontSize = width / 37.5 + 'px';
+        };
+        window.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+      })();
+    </script>
+
+    <!-- Vite 会自动注入打包后的 JS -->
   </body>
 </html>
-<script>
-  (function () {
-    const docEl = document.documentElement;
-    const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-    const recalc = () => {
-      const width = docEl.clientWidth;
-      if (!width) return;
-      // 假设设计稿是 375px，设置 1rem = width / 37.5
-      docEl.style.fontSize = (width / 37.5) + 'px';
-    };
-    window.addEventListener(resizeEvt, recalc, false);
-    document.addEventListener('DOMContentLoaded', recalc, false);
-  })();
-</script>
