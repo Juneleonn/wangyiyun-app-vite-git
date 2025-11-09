@@ -11,9 +11,7 @@
 <script setup>
 
 
-console.log('第一次 修改App.vue')
-console.log("第二次修改 并且add")
-console.log("第三次修改 并且add.")
+console.log('修改main ')
 import AudioPlayer from '@/components/Public/AudioPlay.vue'
 import PopupPage from '@/components/Public/PopupPage.vue'
 import PlayListPopup from '@/components/Public/PlayListPopup.vue'
