@@ -1,6 +1,5 @@
 <template>
   <div class="appContainer">
-    <h1>vite你好</h1>
     <router-view />
     <AudioPlayer />
     <PopupPage/>
@@ -10,7 +9,9 @@
   </div>
 </template>
 <script setup>
-console.log('vite行不行啊')
+
+
+console.log('第一次 修改App.vue')
 import AudioPlayer from '@/components/Public/AudioPlay.vue'
 import PopupPage from '@/components/Public/PopupPage.vue'
 import PlayListPopup from '@/components/Public/PlayListPopup.vue'
